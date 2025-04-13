@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Cairo";
+    src: url("./assets/fonts/Cairo-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cairo";
+    src: url("./assets/fonts/Cairo-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #ededed;
+        --foreground: #ededed;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Cairo", sans-serif !important;
+    direction: rtl;
+}
+
+::selection {
+    color: white;
+    background-color: #8f19e3;
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+}
+
+.hide {
+    opacity: 0;
+    z-index: -1;
+}
