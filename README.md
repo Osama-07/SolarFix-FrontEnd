@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# منصة الفنيين لتركيب وصيانة الألواح الشمسية
 
-## Getting Started
+## مقدمة عن المشروع
 
-First, run the development server:
+منصة ويب تربط العملاء بفنيين معتمدين لتركيب وصيانة الألواح الشمسية. تتيح المنصة للعملاء اختيار الفنيين المتاحين، حجز الخدمات، ثم تقييم الفنيين بعد إتمام العمل.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## التقنيات المستخدمة
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Backend:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **ASP.NET Core Web API**
+- **Entity Framework Core**
+- **SQLite**
+- **JWT** للتحقق من تسجيل الدخول
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frontend:
 
-## Learn More
+- **Next.js**
+- **TypeScript**
+- **Material-UI (MUI)**
 
-To learn more about Next.js, take a look at the following resources:
+## طريقة التشغيل
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Backend:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. قم بتحميل الكود من GitHub.
+2. قم بتثبيت الحزم عبر NuGet أو .NET CLI.
+3. قم بتحديث **Connection String** لقاعدة البيانات (إن لزم الأمر).
+4. قم بتشغيل الـ API باستخدام `dotnet run`.
 
-## Deploy on Vercel
+### Frontend:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. قم بتحميل الكود من GitHub.
+2. قم بتثبيت الحزم باستخدام `npm install` أو `yarn install`.
+3. قم بتشغيل المشروع باستخدام `npm run dev` أو `yarn dev`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## الوظائف الأساسية
+
+### العميل:
+
+1. إنشاء حساب وتسجيل الدخول باستخدام **JWT**.
+2. عرض الفنيين المتاحين مع تفاصيلهم.
+3. حجز الفنيين لخدمات تركيب أو صيانة الألواح الشمسية.
+4. تقييم الفني بعد إتمام الخدمة.
+
+### الفني:
+
+1. تسجيل الدخول ومراجعة الطلبات المتاحة.
+2. قبول الطلبات وإتمام الخدمة.
+3. إغلاق الطلب بعد إتمامه.
+
+## رابط الموقع:
+
+- **رابط الموقع:** [منصة الفنيين لتركيب الألواح الشمسية](https://solar-fix-git-main-osamas-projects-b75d1734.vercel.app/login)
+
+## التحديات التي واجهتها
+
+- واجهت صعوبة في نشر قاعدة بيانات **SQLite** على **MosterASP.NET**.
+- تحديات في تحسين تجربة المستخدم خاصة في عرض حالات الطلبات وتسجيل الدخول بشكل آمن.
+
+## روابط المشروع:
+
+- **رابط GitHub للـ Backend:** [SolarFix-API GitHub](https://github.com/Osama-07/SolarFix-API)
+- **رابط GitHub للـ Frontend:** [SolarFix-FrontEnd GitHub](https://github.com/Osama-07/SolarFix-FrontEnd)
