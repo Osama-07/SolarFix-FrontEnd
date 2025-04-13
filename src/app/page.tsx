@@ -5,7 +5,6 @@ import { useUser } from "./Context/UserContext";
 import { useRouter } from "next/navigation";
 import Customer from "./customer/page";
 import Technician from "./technician/page";
-import UpdateStatusProvider from "./Context/UpdateStatusContext";
 
 export default function Home() {
   const { state, dispatch } = useUser();
@@ -18,10 +17,8 @@ export default function Home() {
   return (
     <div className="relative h-screen">
       <Header />
-      <UpdateStatusProvider>
-        {state.user?.userType?.toLowerCase() === "customer" && <Customer />}
-        {state.user?.userType?.toLowerCase() === "technician" && <Technician />}
-      </UpdateStatusProvider>
+      {state.user?.userType?.toLowerCase() === "customer" && <Customer />}
+      {state.user?.userType?.toLowerCase() === "technician" && <Technician />}
       <button
         className="fixed right-0 bottom-0 mr-5 mb-5 rounded-full duration-200 hover:bg-purple-700 hover:scale-105 cursor-pointer bg-purple-800 text-white px-4 py-2 mt-4 font-bold"
         onClick={handleLogout}
